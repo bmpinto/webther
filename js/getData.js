@@ -5,13 +5,13 @@ define(['jquery'], function($){
       
       $.getJSON(BASE_URL + encodeURI(query_geoplace) + '&format=json', function(data){
           
-          if(data.query.count === 0) {
+          if( data.query.count === 0 ) {
             $(obj.container.selector).html('<p class="error">Y U NO STOP MAKING CITIEZ UP</p>');
             return;
           }
 
           var woeid;
-          if ( $.isArray(data.query.results.place ) ){
+          if ( $.isArray( data.query.results.place ) ){
             woeid = data.query.results.place[0].woeid;
           } else {
             woeid = data.query.results.place.woeid;
@@ -19,11 +19,11 @@ define(['jquery'], function($){
           
           var query_weather = 'select * from weather.forecast where woeid='+ woeid +' and u="c"';
           $.getJSON(BASE_URL + encodeURI(query_weather) + '&format=json', function(data){
-              var temperatura = data.query.results.channel.item.condition.temp,
-                       estado = data.query.results.channel.item.condition.text;
+              var estado      = data.query.results.channel.item.condition.text;
+              var temperatura = data.query.results.channel.item.condition.temp;
 
               $(obj.container.selector).fadeOut(function(){
-                  $(this).html( compiledtemplate({temperatura: temperatura, estado: estado}) ).fadeIn();
+                  $(this).html( compiledtemplate({ temperatura: temperatura, estado: estado }) ).fadeIn();
               });
           });
       });
