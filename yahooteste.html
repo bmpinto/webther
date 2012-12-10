@@ -1,0 +1,26 @@
+<html>  
+  <head>
+    <title>Can I leave my home safely? — Weather Report</title>    
+    <link rel="stylesheet" href="css\style.css">
+  </head>  
+  <body>  
+    <div class="container">
+        <div id="form">
+            <form id="city" method="POST">
+                Hey <input type='text' class='input-big' name='place' placeholder='city...' value=''>, can I leave my home safely?
+                <input type="submit" hidden />
+            </form>
+        </div>
+        
+        <div id='result'>
+            <script id="weatherTemplate" type="text/template">
+                <p>
+                  LOL SURE, can you handle <strong class='colored'><%= temperatura %>&#8451;</strong> and <strong class='colored'><%= estado %></strong> weather?
+                </p>
+            </script>
+        </div> 
+    </div>
+
+  <script data-main="js/main" src="js/libs/require.js"></script>
+  </body>  
+</html>  
