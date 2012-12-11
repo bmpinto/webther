@@ -1,7 +1,15 @@
 requirejs.config({
+	baseUrl: './js',
 	paths: {
-		jquery: 'libs/jquery',
-		underscore: 'libs/underscore'
+		jquery:		'libs/jquery',
+		underscore: 'libs/underscore',
+		debounce:	'libs/debounce'
+	},
+
+	shim: {
+		'debounce': {
+			deps: ['jquery']
+		}
 	}
 });
 

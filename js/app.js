@@ -1,13 +1,15 @@
-define(['jquery',  'underscore', 'getData'], function($, _, getData){
+define(['jquery',  'underscore', 'getData', 'debounce'], function($, _, getData){
 
   var initialize = function(){
     window.templatehtml     = $('#weatherTemplate').html();
     window.compiledtemplate = _.template(templatehtml);
-    $('#city input[type=text]').select();
     render();
+    
   };
 
   var render = function(){
+    $('input[name=place]').keyup( $.debounce( 1000, debouncedSubmit ) );
+
     $('#city').on('submit', function(e){
         e.preventDefault();
 
@@ -17,6 +19,10 @@ define(['jquery',  'underscore', 'getData'], function($, _, getData){
         $('#result').html('<img src="img/ajax-loader.gif" />');
         getData.getWeatherData({ city: city, container: $('#result') });
     });
+  };
+
+  var debouncedSubmit = function(){
+    $('#city').submit();
   };
 
   return {
