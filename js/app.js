@@ -1,28 +1,31 @@
-define(['jquery',  'underscore', 'getData', 'debounce'], function($, _, getData){
+define(['jquery', 'animation', 'weather'], function($, animation, weather){
 
   var initialize = function(){
-    window.templatehtml     = $('#weatherTemplate').html();
-    window.compiledtemplate = _.template(templatehtml);
+    animation.onload();
     render();
-    
   };
 
+  
+
+  /*
+   * On submit: 
+   *   - Se existir uma cidade digitada:
+   *   - Mostra o preloader
+   *   - Expande o container e a div para aparecer temperatura e estado 
+   *   - Envia para processamento o nome da cidade e a div
+   *     onde vai ser mostrado o resultado.
+   */
   var render = function(){
-    $('input[name=place]').keyup( $.debounce( 1000, debouncedSubmit ) );
-
-    $('#city').on('submit', function(e){
+    $('#cityform').on('submit', function(e){
         e.preventDefault();
-
+        
         var city = $('input[name=place]').val();
+        // PROCESS ERROR!!!!
         if ( !city ) return;
 
-        $('#result').html('<img src="img/ajax-loader.gif" />');
-        getData.getWeatherData({ city: city, container: $('#result') });
+        animation.onsubmit();
+        weather.getData({ city: city });
     });
-  };
-
-  var debouncedSubmit = function(){
-    $('#city').submit();
   };
 
   return {

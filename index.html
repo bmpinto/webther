@@ -1,24 +1,35 @@
 <html>  
   <head>
+    <meta charset='utf-8'> 
     <title>Can I leave my home safely? — Weather Report</title>    
     <link rel="stylesheet" href="css\style.css">
   </head>  
   <body>  
+    <section class="credits">
+      Credits
+    </section>
+
     <div class="container">
-        <div id="form">
-            <form id="city" method="POST">
-                Hey <input type='text' class='input-big' name='place' placeholder='city...' value=''>, can I leave my home safely?
-                <input type="submit" hidden />
-            </form>
+        <div class='tiptypecity'>
+          <div class="tiptypecitycontainer">type your city</div>
+          <div class="tiptypecityarrow"></div>
         </div>
-        
-        <div id='result'>
-            <script id="weatherTemplate" type="text/template">
-                <p>
-                  LOL SURE, can you handle <strong class='colored'><%= temperatura %>&#8451;</strong> and <strong class='colored'><%= estado %></strong> weather?
-                </p>
-            </script>
-        </div> 
+
+        <section class="location">
+          <form id="cityform" method="POST">
+                <input type='text' class='city' name='place' placeholder='City...' value='' autocomplete='off'/>
+          </form>
+          <img src="img/preloader.gif" class='preloader'>
+          <p class="cityresult">
+            <p class="cityname"></p>
+            <p class="country"></p>
+          </p>
+        </section>
+
+        <section class="weatherresult">
+            <section class='temperature'></section>
+            <section class='condition'></section>
+        </section>
     </div>
 
   <script data-main="js/main" src="js/libs/require.js"></script>
