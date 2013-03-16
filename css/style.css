@@ -1,0 +1,186 @@
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+::selection{ background-color: white; color: #01CBC1; }
+::-moz-selection{ background-color: white; color: #01CBC1; }
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue", Arial;
+	font-size: 22px;
+	color: white;
+	overflow-y: scroll;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-image: url('../img/bgclouds.png'), 
+					 -webkit-gradient(linear, 0% 0%, 100%   100%, 
+									    color-stop(00%, #411b6e), 
+                      					color-stop(05%, #3D2874),
+									    color-stop(10%, #683DA0),
+									    color-stop(20%, #A666CF),
+									    color-stop(30%, #EB6CED),
+									    color-stop(50%, #E5A0ED),
+									    color-stop(70%, #EB6CED),
+									    color-stop(80%, #A666CF),
+									    color-stop(90%, #683DA0),
+									    color-stop(95%, #3D2874),
+                      					color-stop(100%, #411b6e));
+
+	background-image: url('../img/bgclouds.png'), 
+					  -webkit-linear-gradient(left top, 
+					  						  #411b6e, #3D2874, #683DA0, #A666CF, #EB6CED, #E5A0ED,
+					  						  #EB6CED, #A666CF, #683DA0, #3D2874, #411b6e);
+	background-image: url('../img/bgclouds.png'), 
+					  -moz-linear-gradient(left top, 
+					  					   #411b6e, #3D2874, #683DA0, #A666CF, #EB6CED, #E5A0ED,
+					  					   #EB6CED, #A666CF, #683DA0, #3D2874, #411b6e);
+	background-image: url('../img/bgclouds.png'), 
+					  -o-linear-gradient(left top, 
+					  					 #411b6e, #3D2874, #683DA0, #A666CF, #EB6CED, #E5A0ED,
+					  					 #EB6CED, #A666CF, #683DA0, #3D2874, #411b6e);
+	background-image: url('../img/bgclouds.png'), 
+					  linear-gradient(left top, 
+					  				  #411b6e, #3D2874, #683DA0, #A666CF, #EB6CED, #E5A0ED,
+					  				  #EB6CED, #A666CF, #683DA0, #3D2874, #411b6e);
+}
+
+.credits{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #01CBC1;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.5;
+  -webkit-transition: all .6s;
+}
+
+.credits:hover{
+  opacity: 1;
+  color: #026C68; 
+  width: 200px;
+}
+
+.container { 
+	position: relative;
+	width: 250px; 
+	height: 0;
+	margin: 200px auto; 
+	background-color: #4f378c;
+	overflow: visible !important;
+	-webkit-box-shadow: 0 8px 40px -6px rgba(0,0,0,.65);
+	   -moz-box-shadow: 0 8px 40px -6px rgba(0,0,0,.65);
+	        box-shadow: 0 8px 40px -6px rgba(0,0,0,.65);
+}
+
+.tiptypecity{ display: none; position: relative; z-index: -1; }
+.tiptypecitycontainer{
+	position: absolute; 
+	top: 30px; 
+	left: 0px; 
+	background-color: #3D2874; 
+	padding: 10px; 
+	display: inline; 
+	opacity: 0.7; 
+	font-size: 10px;
+}
+
+.tiptypecityarrow {
+	opacity: 0.7;
+	position: absolute;
+	top: 30px;
+	left: 82px;
+	width: 0; 
+	height: 0; 
+	border-top: 17px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-left: 17px solid #3D2874;
+}
+
+.location, .weatherresult {
+	float: left;
+}
+
+.location { 
+	position: relative;
+	width: 250px;
+	height: 0;
+	color: white;
+	background-color: #01CBC1; 
+}
+
+.weatherresult { 
+	padding: 25px 20px; 
+	width: 0; 
+	height: 225px; 
+	display: none;
+	position: relative; 
+}
+
+.preloader{
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 39px;
+}
+
+.city:focus { color: #026c68; }
+.city {
+	display: none;
+	background-color: #01CBC1;
+	border: 0;
+	color: #026c68;
+	font-size: 25px;
+	outline: none;
+	height: 40px;
+	width: 90%;
+}
+
+::-webkit-input-placeholder { color: #026c68; }
+:-moz-placeholder { color: #026c68; }
+::-moz-placeholder { color: #026c68; }
+:-ms-input-placeholder { color: #026c68; }
+
+.location p{ margin-bottom: -20px; }
+
+.cityresult { display: none; }
+.cityname { word-wrap: break-word; }
+
+.temperature{
+	float: right;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #6c5eb3;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+  	padding-top: 14px;
+  	margin: 0;
+}
+.temperature:after{ content:"º"; }
+
+.condition{ 
+	position: absolute; 
+	width: 100%; 
+	text-align: center; 
+	bottom: 40px;
+	margin: 0; 
+	left: 0; 
+	font-size: 10px; 
+	text-transform: uppercase; 
+}
+
+.weatherImage{ 
+	width: 100%; 
+	margin-top: 40px;
+	padding-left: 55px;
+}
