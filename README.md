@@ -13,4 +13,4 @@ Instructions
 =========
 Clone in, <code>run index.html</code>, and have fun :-)
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/c3b4e1571887ad9e54e1a0beb45c9d63 "githalytics.com")](http://githalytics.com/bmpinto.github.com/webther)
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/c3b4e1571887ad9e54e1a0beb45c9d63 "githalytics.com")](http://githalytics.com/github.com/bmpinto)
