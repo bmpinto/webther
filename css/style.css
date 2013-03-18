@@ -4,6 +4,12 @@
 	        box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+a{ text-decoration: none; color: white; }
+a:hover{ text-decoration: underline; }
+
+>>>>>>> gh-pages
 ::selection{ background-color: white; color: #01CBC1; }
 ::-moz-selection{ background-color: white; color: #01CBC1; }
 
@@ -49,6 +55,7 @@ body {
 					  				  #EB6CED, #A666CF, #683DA0, #3D2874, #411b6e);
 }
 
+<<<<<<< HEAD
 .credits{
   position: absolute;
   top: 20px;
@@ -68,11 +75,41 @@ body {
   width: 200px;
 }
 
+=======
+
+.credits{
+	position: absolute;
+	bottom: 0px;
+	right: 20px;
+	opacity: 0;
+	font-size: 8px; 
+	text-transform: uppercase; 
+}
+
+table td{ 
+	padding-top: 10px;
+}
+
+table td:first-child{
+	text-align: right;
+}
+
+table td:nth-child(2):before{
+	content:'/ ';
+	padding: 0 5px;
+}
+
+
+>>>>>>> gh-pages
 .container { 
 	position: relative;
 	width: 250px; 
 	height: 0;
+<<<<<<< HEAD
 	margin: 200px auto; 
+=======
+	margin: 225px auto; 
+>>>>>>> gh-pages
 	background-color: #4f378c;
 	overflow: visible !important;
 	-webkit-box-shadow: 0 8px 40px -6px rgba(0,0,0,.65);
@@ -118,7 +155,11 @@ body {
 
 .weatherresult { 
 	padding: 25px 20px; 
+<<<<<<< HEAD
 	width: 0px; 
+=======
+	width: 0; 
+>>>>>>> gh-pages
 	height: 225px; 
 	display: none;
 	position: relative; 
@@ -179,4 +220,12 @@ body {
 	text-transform: uppercase; 
 }
 
+<<<<<<< HEAD
 .imgcondition{ margin: 0px 55px; }
+=======
+.weatherImage{ 
+	width: 100%; 
+	margin-top: 40px;
+	padding-left: 55px;
+}
+>>>>>>> gh-pages
