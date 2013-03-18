@@ -17,6 +17,8 @@ define(['jquery'], function($){
             $('.tiptypecitycontainer').animate({left: '-120px'}, 500);
             $('.tiptypecityarrow').animate({left: '-38px'}, 500);
         });
+
+        $('.credits').animate({opacity: '0.5', bottom: '20px'}, 1000);
     }, 50);
   };
 

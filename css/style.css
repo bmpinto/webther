@@ -4,6 +4,9 @@
 	        box-sizing: border-box;
 }
 
+a{ text-decoration: none; color: white; }
+a:hover{ text-decoration: underline; }
+
 ::selection{ background-color: white; color: #01CBC1; }
 ::-moz-selection{ background-color: white; color: #01CBC1; }
 
@@ -49,30 +52,35 @@ body {
 					  				  #EB6CED, #A666CF, #683DA0, #3D2874, #411b6e);
 }
 
+
 .credits{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #01CBC1;
-  padding: 5px;
-  width: 100px;
-  text-align: center;
-  font-size: 15px;
-  opacity: 0.5;
-  -webkit-transition: all .6s;
+	position: absolute;
+	bottom: 0px;
+	right: 20px;
+	opacity: 0;
+	font-size: 8px; 
+	text-transform: uppercase; 
 }
 
-.credits:hover{
-  opacity: 1;
-  color: #026C68; 
-  width: 200px;
+table td{ 
+	padding-top: 10px;
 }
+
+table td:first-child{
+	text-align: right;
+}
+
+table td:nth-child(2):before{
+	content:'/ ';
+	padding: 0 5px;
+}
+
 
 .container { 
 	position: relative;
 	width: 250px; 
 	height: 0;
-	margin: 200px auto; 
+	margin: 225px auto; 
 	background-color: #4f378c;
 	overflow: visible !important;
 	-webkit-box-shadow: 0 8px 40px -6px rgba(0,0,0,.65);
