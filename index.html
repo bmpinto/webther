@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width">
 
         <meta property="og:title" content="webther — weather report"/>
-        <meta property="og:image" content="ogimg.png"/>
+        <meta property="og:image" content="https://raw.github.com/bmpinto/webther/gh-pages/ogimg.png"/>
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" type="image/png" href="favicon.png">
@@ -21,6 +21,25 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
+    <div class="container">
+        <div class='tiptypecity'>
+          <div class="tiptypecitycontainer">type your city</div>
+          <div class="tiptypecityarrow"></div>
+        </div>
+
+        <section class="location">
+          <form id="cityform" method="POST">
+                <input type='text' class='city' name='place' placeholder='City...' value='' autocomplete='off'/>
+          </form>
+          <img src="img/preloader.gif" class='preloader'>
+          <p class="cityresult">
+          </p>
+        </section>
+
+        <section class="weatherresult">
+        </section>
+    </div>
+
     <a href="https://github.com/bmpinto/webther"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" target="_blank" alt="Fork me on GitHub"></a>
 
     <section class="credits">
@@ -45,24 +64,6 @@
       </div>
     </section>
 
-    <div class="container">
-        <div class='tiptypecity'>
-          <div class="tiptypecitycontainer">type your city</div>
-          <div class="tiptypecityarrow"></div>
-        </div>
-
-        <section class="location">
-          <form id="cityform" method="POST">
-                <input type='text' class='city' name='place' placeholder='City...' value='' autocomplete='off'/>
-          </form>
-          <img src="img/preloader.gif" class='preloader'>
-          <p class="cityresult">
-          </p>
-        </section>
-
-        <section class="weatherresult">
-        </section>
-    </div>
 
   <script data-main="js/main" src="js/libs/require.js"></script>
 
